@@ -1,0 +1,2 @@
+# MapaIRParaguayApp
+App mapainversiones Paraguay
