@@ -1,0 +1,30 @@
+﻿<div data-role="header" data-theme="c">
+        <a id="reports-next-btn" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Atrás</a>
+        <h1>Detalles</h1>
+        <a id="next" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Siguiente</a>
+</div>
+<div data-role="content">
+    <!--class="gmailstyletest"-->
+    <div >
+        <div>
+            <label for="form_title">Título de la necesidad</label>
+            <input data-role="none" type="text" name="title" id="form_title" placeholder="Escribe un título" value="<%= title %>" required>
+        </div>
+        <div class="noborder">
+            <label for="form_detail">Descripción</label>
+            <textarea data-role="none" name="detail" id="form_detail" placeholder="Por favor, escribe una descripción del suceso" required><%= details %></textarea>
+        </div>
+        <div hidden="hidden">
+            <%= categories %>
+        </div>
+        <div class="noborder" hidden="hidden">
+            <label for="form_affected">Afecta a :</label>
+            <textarea data-role="none" name="affected" id="form_affected" placeholder="Afecta a" required><%= details %></textarea>
+        </div>
+        <div class="noborder" hidden="hidden">
+            <label for="form_timeaffected">Desde hace :</label>
+            <textarea data-role="none" name="timeaffected" id="form_timeaffected" placeholder="Desde hace" required><%= details %></textarea>
+        </div>
+       
+    </div>
+</div>

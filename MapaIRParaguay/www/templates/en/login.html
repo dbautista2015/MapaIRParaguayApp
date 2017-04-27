@@ -1,0 +1,47 @@
+﻿<div id="submit-header" data-role="header" data-theme="c">
+    <a id="reports-next-btn" data-icon="arrow-l" data-iconpos="left" class="ui-btn-left">Inicio</a>
+    <h1>Ingresar</h1>
+</div>
+
+<div data-role="content">
+    <% if ( FMS.isLoggedIn ) { %>
+    <div id="signed_in_row">
+        <p class="notopmargin">Estás registrado como <%= email %></p>
+        <div id="err" class="nodisplay"></div>
+        <div class="bottom-btn">
+            <input type="button" id="buscarproyectos" name="entrar" value="Buscar Proyectos" data-theme="c">
+            <input type="button" id="logout" name="logout" value="Cerrar Sesion" data-theme="c">
+        </div>
+    </div>
+    <div id="password_row" class="nodisplay">
+        <p class="notopmargin">
+            Cerrar Sesión!
+        </p>
+        <% } else { %>
+        <div id="password_row">
+            <% } %>
+            <form name="signinForm" class="inputcard" id="signinForm">
+                <div>
+                    <input data-role="none" type="number" min="1" value="" name="nroCuenta" id="form_nroCuenta" placeholder="Su número de cuenta" required>
+                </div>
+                <div>
+                    <input data-role="none" type="password" value="" name="contrasenha" id="form_contrasenha" placeholder="Su contraseña" required>
+                </div>
+                <div class="noborder">
+                    <input type="submit" id="login" name="login" value="Iniciar Sesión" data-theme="c">
+                </div>
+            </form>
+        </div>
+        <!--cuando ingresa al sistema me muestra esta pantalla-->
+        <div id="success_row" class="nodisplay">
+            <p class="notopmargin">
+                Bienvenido Sesión Iniciada
+            </p>
+            <div id="err" class="nodisplay"></div>
+            <div class="bottom-btn">
+                <input type="button" id="buscarproyectos" name="entrar" value="Buscar Proyectos" data-theme="c">
+                <input type="button" id="logout" name="logout" value="Cerrar Sesion" data-theme="c">
+            </div>
+        </div>
+    </div>
+</div>

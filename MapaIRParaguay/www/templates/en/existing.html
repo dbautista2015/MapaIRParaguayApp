@@ -1,0 +1,35 @@
+﻿<div data-role="header" data-theme="c">
+        <h1>Foto no cargada</h1>
+</div>
+<div data-role="content" role="main">
+    <div id="existing_report">
+    <% if ( title ) { %>
+        <h3><%= title %></h3>
+    <% } %>
+
+        <div class="meta">
+        <p>
+        <% if ( category && category != '-- Pick a category --' ) { %>
+            Saved in the <%= category %> category
+        <% } %>
+        </p>
+
+        <p><% print( moment( created ).fromNow() ) %></p>
+        </div>
+
+        <% if ( file ) { %>
+            <div class="photo" style="background-image: url(<%= file %>)"></div>
+        <% } %>
+
+        <% if ( details ) { %>
+        <div class="details"><div><%= details %></div></div>
+        <% } %>
+    </div>
+
+
+    <div class="right">
+    <input id="use_report" type="button" value="Complete Reporte Ahora" data-role="button" data-theme="c" />
+    <input id="save_report" type="button" value="Guardar para más tarde" data-role="button" data-theme="c" />
+    <input id="discard" type="button" value="Descartar" data-role="button" data-theme="c" />
+    </div>
+</div>
