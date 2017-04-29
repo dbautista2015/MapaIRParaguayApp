@@ -86,6 +86,10 @@
         background-size: 810px 54px;
     }
 
+   
+
+
+
     .ui-input-search {
         background-image: none;
         background-color: rgba(255,255,255,0.95);
@@ -762,13 +766,27 @@
     }
 
     #drafts .use_report {
-        text-align: left;
-        margin-left: 50px;
+        /*text-align: justify;
+        text-size-adjust: inherit;
+        font-size:smaller;
+        margin-left: 0px;
+        height: 100px;
+        width:auto;
+        white-space:normal;*/
+        text-align:justify;
+        font-size:smaller;
+        font-weight:bold;
+        display:block;
+        margin:-0.5em 0 0.6em;
+        text-overflow:ellipsis;
+        overflow:hidden;
+        white-space:normal;
     }
+
 
     #drafts .with_photo.with_location .use_report {
         margin-left: 0px;
-        padding-left: 5px;
+        padding-left: 0px;
     }
 
     #drafts li.with_photo.with_location:before {

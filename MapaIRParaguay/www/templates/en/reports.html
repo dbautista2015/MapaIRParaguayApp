@@ -8,7 +8,8 @@
         <p class="notopmargin">
         Estos son tus borradores, reportes sin enviar. Para finalizar y enviarlos, abre un reporte cuando te encuentres conectado a Internet.
         </p>
-        <ul data-role="listview" data-split-theme="b" data-inset="true" data-split-icon="delete" class="notopmargin reports">
+        <!--class="notopmargin reports"-->
+        <ul data-role="listview" data-split-theme="c" data-inset="true" data-split-icon="delete">
             <% drafts.each(function(draft) {
                 if ( draft ) {
                     var classes = [];
@@ -22,9 +23,8 @@
                     if ( classes.length ) {
                         draftClass = 'class="' + classes.join(' ') + '"';
                     }
-                    print( '<li id="' + draft.id + '"' + draftClass + '><a href="#" class="use_report">' + draft.description() + '</a><a class="del_report" href="#" title="delete">Delete</a></li>' );
-                }
-                } ); %>
-        </ul>
+                    print( '<li id="' + draft.id + '" ' + draftClass + '><a href="#" class="use_report">' + draft.description() + '</a><a class="del_report" href="#" title="delete">Delete</a></li>' );
+    }
+    } ); %></ul>
     </div>
 </div>
