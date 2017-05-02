@@ -14,7 +14,8 @@
                 pc: '',
                 file: '',
                 created: moment.utc(),
-                id_proyecto: 0
+                id_proyecto: 0,
+                esPrimeraVista:0
                 //Agrego las nuevas variables para paraguay,
                 //nombreProyecto: '',
                 //codigoSnip:'',

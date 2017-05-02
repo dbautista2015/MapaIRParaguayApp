@@ -32,6 +32,7 @@
                 ) {
                     this.navigate( 'existing' );
                 } else {
+                    FMS.esPrimeraVista=1
                     this.navigate( 'around' );
                 }
             }

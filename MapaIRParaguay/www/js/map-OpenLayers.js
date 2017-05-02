@@ -264,7 +264,15 @@ function show_map(event) {
         fixmystreet.nav.activate();
         $('#view-my-reports').show();
         $('#login-options').show();
-        $('#mark-here').show();
+        if (FMS.esPrimeraVista == 1) {
+            $('#mark-here').hide();
+            FMS.esPrimeraVista == 0;
+        }
+        else
+        {
+            $('#mark-here').show();
+        }
+        
     }
 }
 
