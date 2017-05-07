@@ -16,10 +16,15 @@
                 'vclick #id_existing': 'addPhoto',
                 'vclick #id_del_photo_button': 'deletePhoto'
             },
-
+            afterDisplay:function()
+            {
+                if (this.$('#photo_title').is(":visible")) this.$('#photo-next-btn').show();
+                else this.$('#photo-next-btn').hide();
+            },
             beforeDisplay: function() {
                 this.fixPageHeight();
                 this.$('#id_del_photo_button').hide();
+                
                 if ( this.model.get('file') ) {
                     $('#id_photo_button').parents('.ui-btn').hide();
                     $('#id_existing').parents('.ui-btn').hide();
@@ -53,6 +58,7 @@
                 e.preventDefault();
                 $.mobile.loading('show');
                 $('#photo').hide();
+                this.$('#photo-next-btn').show();
                 var that = this;
 
                 var options = this.getOptions();
@@ -64,6 +70,7 @@
                 e.preventDefault();
                 $.mobile.loading('show');
                 $('#photo').hide();
+                this.$('#photo-next-btn').show();
                 var that = this;
                 var options = this.getOptions(true);
                 navigator.camera.getPicture( function(imgURI) { that.addPhotoSuccess(imgURI); }, function(error) { that.addPhotoFail(error); }, options);
@@ -126,7 +133,7 @@
                     that.model.set('file', '');
                     FMS.saveCurrentDraft(true);
                     $('#photo').attr('src', 'images/placeholder-photo.png').addClass('placeholder').removeClass('small');
-                    $('#photo-next-btn .ui-btn-text').text('Omitir').hide();
+                    //$('#photo-next-btn .ui-btn-text').text('Omitir').hide();
                     $('#id_photo_button').parents('.ui-btn').show();
                     $('#id_existing').parents('.ui-btn').show();
                 });

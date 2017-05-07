@@ -5,7 +5,7 @@
             <a id="photo-next-btn" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Siguiente</a> 
     <% } %>-->
         <% if ( file == '' ) { %>
-        <a id="photo-next-btn" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right" data-theme="c" hidden="hidden"></a>
+        <a id="photo-next-btn" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right" data-theme="c" hidden="hidden">Siguiente</a>
         <% } else { %>
         <a id="photo-next-btn" data-icon="arrow-r" data-iconpos="right" class="ui-btn-right">Siguiente</a>
         <% } %>
@@ -18,7 +18,7 @@
             nophotoClass = '';
         } %>
     <h2 id="nophoto_title" class="<% print( nophotoClass ); %>">
-        Bienvenido <%= name %> <em>(opcional)</em>
+        Bienvenido <%= name %>
     </h2>
     <h2 id="photo_title" class="<% print( photoClass ); %>">
         Foto para el reporte
